@@ -1,0 +1,8 @@
+node_modules/
+__pycache__/
+*.pyc
+*.tgz
+!dist/*.tgz
+.test-home/
+.test-data/
+coverage/

@@ -1,0 +1,8 @@
+- insert:
+    - id: alaya
+      name: dsh-alaya
+      config:
+        python: python
+        kbRoot: ''
+        timeoutMs: 120000
+        maxOutputBytes: 1048576

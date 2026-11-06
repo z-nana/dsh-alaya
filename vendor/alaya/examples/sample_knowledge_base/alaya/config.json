@@ -1,0 +1,63 @@
+{
+  "version": "3.1.0",
+  "name": "Alaya",
+  "name_zh": "识海",
+  "enabled": true,
+  "activation_mode": "contextual",
+  "language": "zh",
+  "bi_enabled": true,
+  "knowledge": {
+    "version": "3.0.0",
+    "top_k": 3,
+    "min_pool": 10,
+    "cold_after_days_default": 90,
+    "cold_warning_days": 75,
+    "wake_strength": 0.5,
+    "sleep_threshold": 0.1,
+    "sleep_notification_threshold": 30,
+    "dirty_categories": [],
+    "sleep_counter": 0,
+    "description_change_thresholds": [
+      {"max_cards": 5, "changes": 1},
+      {"max_cards": 30, "changes": 3},
+      {"max_cards": 100, "changes": 5},
+      {"max_cards": null, "changes": 10}
+    ]
+  },
+  "memory": {
+    "version": "2.0.0",
+    "semantic_memory_enabled": true,
+    "hot_zone_size": 5,
+    "cold_zone_size": 45,
+    "mood_trajectory_size": 3,
+    "attention_decay_rate": 0.7,
+    "attention_boost_rate": 0.3,
+    "attention_prune_threshold": 0.1,
+    "ambient_max_kb": 64,
+    "profile_max_kb": 128,
+    "state_max_kb": 128,
+    "shared_history_hot": 20,
+    "shared_history_cold": 80,
+    "shared_history_max_kb": 512
+  },
+  "persona": {
+    "version": "2.0.0",
+    "default_persona": "feynman",
+    "language_mode": "global",
+    "max_cards_per_persona": 5,
+    "max_participants_in_discussion": 6,
+    "affinity_decay": 0.992
+  },
+  "import": {
+    "version": "2.0.0",
+    "default_category": "uncategorized",
+    "max_chars_for_extraction": 8000,
+    "parallel_workers": 4
+  },
+  "maintenance": {
+    "version": "2.0.0",
+    "auto_xunxi_interval_days": 1,
+    "description_refresh_max_wait_days": 3
+  },
+  "last_xunxi_time": ""
+}

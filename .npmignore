@@ -1,0 +1,7 @@
+**/__pycache__/
+**/*.pyc
+**/*.pyo
+.test-data/
+node_modules/
+test/
+.github/

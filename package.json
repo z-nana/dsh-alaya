@@ -1,0 +1,59 @@
+{
+  "name": "dsh-alaya",
+  "version": "0.1.0",
+  "description": "Alaya 识海：DSH 原生多角色知识库、资料入库与长期记忆工具",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./package.json": "./package.json"
+  },
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/z-nana/dsh-alaya.git"
+  },
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "alaya",
+    "knowledge-base",
+    "memory"
+  ],
+  "engines": {
+    "node": ">=24.9.0",
+    "dsh": "0.2.2-rc.1"
+  },
+  "files": [
+    "index.js",
+    "lib/**/*.js",
+    "bridge.py",
+    "cordis.patch.yml",
+    "vendor/**/*.py",
+    "vendor/**/*.json",
+    "vendor/**/*.md",
+    "vendor/alaya/LICENSE",
+    "docs/**/*.md",
+    "NOTICE",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "node --test",
+    "check": "node --check index.js && python -m compileall -q bridge.py vendor/alaya/scripts"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh-tools": "0.2.2-rc.1",
+    "@deepseek-ai/schemastery": "~3.19.0"
+  },
+  "devDependencies": {
+    "@deepseek-ai/cordis": "~4.1.0",
+    "@deepseek-ai/dsh-system-prompt": "0.2.2-rc.1",
+    "@deepseek-ai/dsh-tools": "0.2.2-rc.1",
+    "@deepseek-ai/schemastery": "~3.19.0"
+  }
+}

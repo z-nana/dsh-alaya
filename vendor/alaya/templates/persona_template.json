@@ -1,0 +1,48 @@
+{
+  "persona": "PersonaName",
+  "persona_zh": "角色中文名 (optional)",
+  "title": "One-line archetype description (English)",
+  "title_zh": "角色定位说明（中文，可选）",
+  "version": 1,
+  "created_at": "YYYY-MM-DD",
+  "is_omniview": false,
+  "language": "en",
+  "ego_vector": {
+    "interest_foci": {
+      "area_1_name": {"value": 0.9, "floor": 0.15},
+      "area_2_name": {"value": 0.8, "floor": 0.1},
+      "area_3_name": {"value": 0.7, "floor": 0.1},
+      "area_4_name": {"value": 0.7, "floor": 0.1},
+      "area_5_name": {"value": 0.6, "floor": 0.1}
+    },
+    "bias_dimensions": {
+      "dimension_1": {"value": 0.9, "floor": 0.15},
+      "dimension_2": {"value": 0.8, "floor": 0.1},
+      "dimension_3": {"value": 0.7, "floor": 0.1}
+    },
+    "communication": {
+      "style_1": {"value": 0.9, "floor": 0.15},
+      "style_2": {"value": 0.8, "floor": 0.1},
+      "style_3": {"value": 0.7, "floor": 0.1}
+    }
+  },
+  "affinity": {},
+  "interaction_history": [],
+  "confidence": 0.75,
+  "mode_config": {
+    "behavior": "auto",
+    "auto_trigger_threshold": 0.7
+  },
+  "signature_phrases": ["phrase1", "phrase2", "phrase3", "phrase4", "phrase5"],
+  "icon": "🤖",
+  "domain_scope": {
+    "owns": ["area1"],
+    "shares": ["area2"],
+    "defers_to": {}
+  },
+  "triggers": {
+    "active": ["keyword1", "keyword2"],
+    "passive": ["context1"],
+    "emotions": ["emotion1"]
+  }
+}

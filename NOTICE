@@ -1,0 +1,10 @@
+DSH Alaya adapter, 2026.
+
+Includes Alaya 3.1.0 from DL-LEO-gitee/alaya, branch alaya_subagents,
+provided by the user as alaya-alaya_subagents.zip.
+Upstream: https://gitee.com/DL-LEO-gitee/alaya/tree/alaya_subagents/
+License: Apache License, Version 2.0 (see LICENSE).
+Upstream Python implementation and documentation are retained in vendor/alaya.
+DSH adapter additions: bundle manifest, Cordis tools, Python JSON bridge,
+bounded process runner, integration tests, packaging and installation docs.
+No affiliation with or endorsement by DeepSeek or upstream Alaya is implied.

@@ -1,0 +1,36 @@
+name: Release installable bundle
+on:
+  push:
+    branches: [main]
+    paths: ['package.json', '.github/workflows/release.yml']
+    tags: ['v*']
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: npm ci --ignore-scripts
+      - run: npm test
+      - run: npm run check
+      - run: npm pack
+      - name: Publish tarball
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          tag="v$(node -p 'JSON.parse(require("fs").readFileSync("package.json", "utf8")).version')"
+          if gh release view "$tag" >/dev/null 2>&1; then
+            gh release upload "$tag" ./*.tgz --clobber
+          else
+            gh release create "$tag" ./*.tgz --target "$GITHUB_SHA" --title "DSH Alaya $tag" --notes-file docs/release-notes.md
+          fi
